@@ -1,4 +1,5 @@
-///using async
+////////using promise.then
+
 // console.log("person1 : shows ticket");
 // console.log("person2 : shows ticket");
 
@@ -48,7 +49,9 @@
 
 
 
-// ////using  await
+//////////using async await
+
+
 // console.log("person1 : shows ticket");
 // console.log("person2 : shows ticket");
 
