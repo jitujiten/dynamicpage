@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>making form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="background">
+        <div id="form_box">
+            <div id="fix_letter">
+                <h2 id="heading">Book a Call</h2>
+                <h5 id="inform">Book a call slot and our representative will call you within 1hr of selected time.</h5>
+            </div>
+            <br>
+            <hr>
+            <form action="#" id="form">
+                <div id="msg"></div>
+                <label for="name" class="label">Name:</label><br>
+                <input type="text" name="username" id="userid" class="input"  autocomplete><br>
+                <label for="email" class="label">Email:</label><br>
+                <input type="email" name="email" id="useremail" class="input"  autocomplete><br>
+                <label for="phone" class="label">Phone:</label><br>
+                <input type="tel" name="phone" id="userphone" class="input"  autocomplete><br>
+                <label for="Time" class="label">Time for Call:</label><br>
+                <input type="date" name="date" id="userdate"  autocomplete>
+                <input type="time" name="time" id="usertime"><br><br>
+                <input type="submit" value="GET A CALL" id="submit">
+                <input type="reset" value="reset" id="reset">
+               
+            </form>
+        </div>  
+        <div id="display_box"><ul class="usersList"></ul> </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

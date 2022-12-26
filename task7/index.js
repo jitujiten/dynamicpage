@@ -191,7 +191,6 @@
 // console.log("e");
 /////////print this in such a way that it print a,b,c,d,e
 
-
 // ans:-we can do this using async await
 
 // var asyncfun = async () => {
@@ -274,52 +273,104 @@
 
 ///////my own example
 
-function fatherwillcome(){
-   return new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("father come from office");
-    },3000);
-   }) 
-}
+// function fatherwillcome(){
+//    return new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("father come from office");
+//     },3000);
+//    }) 
+// }
 
-function gotofair(){
-    return new Promise((resolve,reject)=>{
-     setTimeout(()=>{
-         resolve("going to fair with father");
-     },2000);
-    }) 
- }
-
-
- function boughttoy(){
-    return new Promise((resolve,reject)=>{
-     setTimeout(()=>{
-         resolve("bought toys");
-     },1000);
-    }) 
- }
-
- function comehouse(){
-    return new Promise((resolve,reject)=>{
-     setTimeout(()=>{
-         resolve("come home with father");
-     },500);
-    }) 
- }
+// function gotofair(){
+//     return new Promise((resolve,reject)=>{
+//      setTimeout(()=>{
+//          resolve("going to fair with father");
+//      },2000);
+//     }) 
+//  }
 
 
+//  function boughttoy(){
+//     return new Promise((resolve,reject)=>{
+//      setTimeout(()=>{
+//          resolve("bought toys");
+//      },1000);
+//     }) 
+//  }
 
- var asyncfun=async ()=>{
-    var msg1=await fatherwillcome();
-    console.log(msg1);
+//  function comehouse(){
+//     return new Promise((resolve,reject)=>{
+//      setTimeout(()=>{
+//          resolve("come home with father");
+//      },500);
+//     }) 
+//  }
 
-    var msg2=await gotofair();
-    console.log(msg2);
 
-    var msg3=await boughttoy();
-    console.log(msg3);
 
-    var msg4=await comehouse();
-    console.log(msg4);
- }
- asyncfun()
+//  var asyncfun=async ()=>{
+//     var msg1=await fatherwillcome();
+//     console.log(msg1);
+
+//     var msg2=await gotofair();
+//     console.log(msg2);
+
+//     var msg3=await boughttoy();
+//     console.log(msg3);
+
+//     var msg4=await comehouse();
+//     console.log(msg4);
+//  }
+//  asyncfun();
+
+
+
+//////another example
+
+// function plantopuri(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//          res(console.log("reached puri"));
+//         },3000)
+//     })
+// }
+
+
+
+
+// function reachjagarnathtemple(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//          res(console.log("reached jagarnathtemple"));
+//         },4000)
+//     })
+// }
+
+
+
+
+
+
+// function reachpuriseabeach(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//          res(console.log("reached puri seabeach"));
+          
+//         },1000)
+//     })
+// }
+
+
+
+
+
+// var asyncfun= async ()=>{
+//     var msg = await plantopuri();
+
+//     var msg1 = await reachpuriseabeach();
+
+//     var msg2= await reachjagarnathtemple();
+    
+// }
+
+// asyncfun();
