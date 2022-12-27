@@ -1,0 +1,24 @@
+#container{
+    background-image:url("global-network-fm-logistic-1230x690.jpg") ;
+    background-size: cover;
+}
+#formdiv{
+    background-image: linear-gradient(rgb(23, 23, 144),white);  
+    border-radius: 6px;
+}
+#heading1{
+    color:whitesmoke;
+}
+#para{
+    color:rgb(20, 17, 17);  
+    font-weight: 900;
+}
+
+#datadiv{
+    background-image: linear-gradient(rgb(158, 158, 226),white);  
+    border-radius: 6px;
+}
+li{
+    color:rgb(20, 17, 17);  
+    font-weight: 600;
+}

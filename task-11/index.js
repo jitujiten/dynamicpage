@@ -19,8 +19,6 @@ function gettingdata(e){
         time
     }
 
-    // var objtostr=JSON.stringify(obj);
-    // localStorage.setItem(obj.email,objtostr);
 
    axios.post("https://crudcrud.com/api/4e10751c31254ab9becf5e7916a0ec8f/apointment_datas",obj)
    .then((res)=>{
@@ -42,40 +40,34 @@ window.addEventListener("DOMContentLoaded",()=>{
 
   })
   .catch((err)=>{
-    setTimeout(()=>{
       document.getElementById("ullist").innerHTML+=`<h4 style="color:red">something went wrong</h4>`;
-    },1000)
   })
-
-
-
-  // for(var i=0;i<localStorage.length;i++){
-  //   var key=localStorage.key(i);
-  //   var data=localStorage.getItem(key);
-  //   var strtoobj=JSON.parse(data);
-  //   showuseronscreen(strtoobj);
-  // }
     
 })
 
 function showuseronscreen(obj){
 
-const li=`<li class="list-group-item border-success mt-3" id="${obj.email}">${obj.name} <button class="btn btn-danger" onClick="deleteing('${obj.email}')">delete</button> <button class="btn btn-warning" onClick="editinging('${obj.email}')">edit</button></li>`
+const li=`<li class="list-group-item border-success mt-3" id="${obj._id}">${obj.name} <button class="btn btn-danger" onClick="deleteing('${obj._id}')">delete</button> <button class="btn btn-warning" onClick="editinging('${obj._id}')">edit</button></li>`
 
 var target=document.getElementById("ullist");
 target.innerHTML+=li;
 
 }
 
-function deleteing(res){
-   localStorage.removeItem(e);
-   deletefromscreen(e);
+function deleteing(userid){
+   axios.delete(`https://crudcrud.com/api/4e10751c31254ab9becf5e7916a0ec8f/apointment_datas/${userid}`)
+   .then((res)=>{
+    deletefromscreen(userid);
+   })
+  .catch((err)=>{
+    document.getElementById("ullist").innerHTML+=`<h4 style="color:red">something went wrong</h4>`;
+  })
 }
 
-function deletefromscreen(e){
+function deletefromscreen(userid){
     var parent=document.getElementById("ullist");  
 
-    var child=document.getElementById(e);
+    var child=document.getElementById(userid);
 
     parent.removeChild(child);
 }
